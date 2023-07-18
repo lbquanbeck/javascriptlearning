@@ -20,10 +20,10 @@
  image[7] = 'homebanner-08.jpg'
  image[8] = 'homebanner-09.jpg'
  image[9] = 'homebanner-10.jpg'
- image[12] = 'homebanner-13.jpg'
- image[13] = 'homebanner-14.jpg'
- image[14] = 'homebanner-15.jpg'
- image[15] = 'homebanner-16.jpg'
+ image[10] = 'homebanner-13.jpg'
+ image[11] = 'homebanner-14.jpg'
+ image[12] = 'homebanner-15.jpg'
+ image[13] = 'homebanner-16.jpg'
  var rand = 60/image.length
  function randomimage() {
  	currentdate = new Date()
@@ -31,9 +31,9 @@
  	image_number = Math.floor(image_number/rand)
  	return(image[image_number])
  }
- document.write("<img style='height: 100%; width: 100%; object-fit: cover;' src='" + imlocation + randomimage()+ "'>");
+ document.write("<img style='height: 100%; width: 100%; object-fit: cover;' id='randomheader' src='" + imlocation + randomimage()+ "'>"); 
 setInterval(function () { 
-    $("<img style='height: 100%; width: 100%; object-fit: cover;' src='" + imlocation + randomimage()+ "'>")
+ document.getElementById("randomheader").src= '" + imlocation + randomimage()+ "'>");
     }, 10000); 
 //-->
 </script>
